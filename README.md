@@ -9,10 +9,8 @@ iOS自6.0起添加了`UIActivityViewController`，集成了部分社交服务，
 #### 使用cocoapods安装
 
 ```
-pod 'HBShare', :git => 'https://github.com/lzyy/HBShare.git'
+pod 'HBShare', '~>0.0.1'
 ```
-
-等通过Cocoapods审核后，就不需要指定git地址了。
 
 ### 截图
 
