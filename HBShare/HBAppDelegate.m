@@ -7,6 +7,8 @@
 //
 
 #import "HBAppDelegate.h"
+#import "HBShare.h"
+#import "UIImage+ResizeCrop.h"
 
 @implementation HBAppDelegate
 
@@ -16,7 +18,59 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self setupRootViewController];
     return YES;
+}
+
+- (void)setupRootViewController
+{
+    [HBShare registerWeixinAPIKey:@"wxd930ea5d5a258f4f"];
+    
+    UIViewController *viewController = [[UIViewController alloc] init];
+    self.window.rootViewController = viewController;
+    UIButton *(^createButton)(NSString *) = ^UIButton *(NSString *buttonName) {
+        static NSInteger positionY = 100;
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        [button setTitle:buttonName forState:UIControlStateNormal];
+        button.frame = CGRectMake(0, positionY, 320, 30);
+        positionY += 30;
+        [viewController.view addSubview:button];
+        return button;
+    };
+    
+    UIButton *shareImageButton = createButton(@"分享图片");
+    shareImageButton.tag = 0;
+    [shareImageButton addTarget:self action:@selector(onTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *shareURLButton = createButton(@"分享链接");
+    shareURLButton.tag = 1;
+    [shareURLButton addTarget:self action:@selector(onTapped:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)onTapped:(UIButton *)button
+{
+    UIImage *image = [UIImage imageNamed:@"demo"];
+    if (button.tag == 0) {
+        [[HBShare sharedInstance] shareImageWithTitle:@"清凉小MM" image:image completionHandler:^(NSString *activityType, BOOL completed) {
+            if (completed) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"图片分享成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+        }];
+    } else {
+        UIImage *thumbnail = [image imageByScalingAndCroppingForSize:CGSizeMake(100, 100)];
+        [[HBShare sharedInstance] shareWebPageWithTitle:@"我是一枚链接哦" description:@"啥都不说了" url:@"http://huaban.com" thumbnailImage:thumbnail completionHandler:^(NSString *activityType, BOOL completed) {
+            if (completed) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"链接分享成功" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+        }];
+    }
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [WXApi handleOpenURL:url delegate:[HBShare sharedInstance]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -19,6 +19,12 @@
 		6A1A0A701917336700E7D03F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A0A581917336700E7D03F /* UIKit.framework */; };
 		6A1A0A781917336700E7D03F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A0A761917336700E7D03F /* InfoPlist.strings */; };
 		6A1A0A7A1917336700E7D03F /* HBShareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0A791917336700E7D03F /* HBShareTests.m */; };
+		6A1A0A87191733AC00E7D03F /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1A0A84191733AC00E7D03F /* libWeChatSDK.a */; };
+		6A1A0A8D191733E800E7D03F /* HBShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0A8C191733E800E7D03F /* HBShare.m */; };
+		6A1A0A901917345800E7D03F /* NSData+Base64Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0A8F1917345800E7D03F /* NSData+Base64Encode.m */; };
+		6A1A0A931917358400E7D03F /* UIImage+ResizeCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0A921917358400E7D03F /* UIImage+ResizeCrop.m */; };
+		6A1A0A961917360E00E7D03F /* UIViewController+TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A0A951917360E00E7D03F /* UIViewController+TopViewController.m */; };
+		6A1A0A9A19173A7F00E7D03F /* demo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A1A0A9919173A7F00E7D03F /* demo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,18 @@
 		6A1A0A751917336700E7D03F /* HBShareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HBShareTests-Info.plist"; sourceTree = "<group>"; };
 		6A1A0A771917336700E7D03F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6A1A0A791917336700E7D03F /* HBShareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBShareTests.m; sourceTree = "<group>"; };
+		6A1A0A84191733AC00E7D03F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		6A1A0A85191733AC00E7D03F /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		6A1A0A86191733AC00E7D03F /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		6A1A0A8B191733E800E7D03F /* HBShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBShare.h; sourceTree = "<group>"; };
+		6A1A0A8C191733E800E7D03F /* HBShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBShare.m; sourceTree = "<group>"; };
+		6A1A0A8E1917345800E7D03F /* NSData+Base64Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Encode.h"; sourceTree = "<group>"; };
+		6A1A0A8F1917345800E7D03F /* NSData+Base64Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Encode.m"; sourceTree = "<group>"; };
+		6A1A0A911917358400E7D03F /* UIImage+ResizeCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeCrop.h"; sourceTree = "<group>"; };
+		6A1A0A921917358400E7D03F /* UIImage+ResizeCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeCrop.m"; sourceTree = "<group>"; };
+		6A1A0A941917360E00E7D03F /* UIViewController+TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TopViewController.h"; sourceTree = "<group>"; };
+		6A1A0A951917360E00E7D03F /* UIViewController+TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TopViewController.m"; sourceTree = "<group>"; };
+		6A1A0A9919173A7F00E7D03F /* demo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,7 @@
 			files = (
 				6A1A0A571917336700E7D03F /* CoreGraphics.framework in Frameworks */,
 				6A1A0A591917336700E7D03F /* UIKit.framework in Frameworks */,
+				6A1A0A87191733AC00E7D03F /* libWeChatSDK.a in Frameworks */,
 				6A1A0A551917336700E7D03F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,8 +126,11 @@
 		6A1A0A5A1917336700E7D03F /* HBShare */ = {
 			isa = PBXGroup;
 			children = (
+				6A1A0A8A191733D600E7D03F /* Classes */,
+				6A1A0A831917338200E7D03F /* Vendors */,
 				6A1A0A631917336700E7D03F /* HBAppDelegate.h */,
 				6A1A0A641917336700E7D03F /* HBAppDelegate.m */,
+				6A1A0A9919173A7F00E7D03F /* demo@2x.png */,
 				6A1A0A661917336700E7D03F /* Images.xcassets */,
 				6A1A0A5B1917336700E7D03F /* Supporting Files */,
 			);
@@ -142,6 +164,39 @@
 				6A1A0A761917336700E7D03F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A1A0A831917338200E7D03F /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				6A1A0A88191733AE00E7D03F /* WeChat */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		6A1A0A88191733AE00E7D03F /* WeChat */ = {
+			isa = PBXGroup;
+			children = (
+				6A1A0A84191733AC00E7D03F /* libWeChatSDK.a */,
+				6A1A0A85191733AC00E7D03F /* WXApi.h */,
+				6A1A0A86191733AC00E7D03F /* WXApiObject.h */,
+			);
+			name = WeChat;
+			sourceTree = "<group>";
+		};
+		6A1A0A8A191733D600E7D03F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6A1A0A941917360E00E7D03F /* UIViewController+TopViewController.h */,
+				6A1A0A951917360E00E7D03F /* UIViewController+TopViewController.m */,
+				6A1A0A911917358400E7D03F /* UIImage+ResizeCrop.h */,
+				6A1A0A921917358400E7D03F /* UIImage+ResizeCrop.m */,
+				6A1A0A8E1917345800E7D03F /* NSData+Base64Encode.h */,
+				6A1A0A8F1917345800E7D03F /* NSData+Base64Encode.m */,
+				6A1A0A8B191733E800E7D03F /* HBShare.h */,
+				6A1A0A8C191733E800E7D03F /* HBShare.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A1A0A5F1917336700E7D03F /* InfoPlist.strings in Resources */,
+				6A1A0A9A19173A7F00E7D03F /* demo@2x.png in Resources */,
 				6A1A0A671917336700E7D03F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A1A0A651917336700E7D03F /* HBAppDelegate.m in Sources */,
+				6A1A0A901917345800E7D03F /* NSData+Base64Encode.m in Sources */,
+				6A1A0A8D191733E800E7D03F /* HBShare.m in Sources */,
+				6A1A0A931917358400E7D03F /* UIImage+ResizeCrop.m in Sources */,
 				6A1A0A611917336700E7D03F /* main.m in Sources */,
+				6A1A0A961917360E00E7D03F /* UIViewController+TopViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -347,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -361,6 +421,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBShare/HBShare-Prefix.pch";
 				INFOPLIST_FILE = "HBShare/HBShare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HBShare/Vendors",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,6 +439,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HBShare/HBShare-Prefix.pch";
 				INFOPLIST_FILE = "HBShare/HBShare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HBShare/Vendors",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,6 +508,7 @@
 				6A1A0A7F1917336700E7D03F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A1A0A801917336700E7D03F /* Build configuration list for PBXNativeTarget "HBShareTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +517,7 @@
 				6A1A0A821917336700E7D03F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
