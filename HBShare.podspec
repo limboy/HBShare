@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = 'HBShare'
   spec.version      = '0.0.1'
-  spec.license      = 'MIT'
+  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage     = 'http://github.com/lzyy/HBShare'
   spec.author       = 'limboy'
   spec.summary      = 'HBShare is a simple share helper built on UIActivityViewController with WeChat support'
